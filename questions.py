@@ -34,3 +34,5 @@ class writefile:
     def write(self, content):
         with open(self.filename, "w") as f:
             f.write(content)
+        with open(self.filename, "r") as file:
+            print(file.read())

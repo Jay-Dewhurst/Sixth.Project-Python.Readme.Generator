@@ -1,5 +1,8 @@
 from InquirerPy import prompt
 from questions import Questions, writefile
+from effects import display_table
+from effects import loading_simulation
+from effects import setup_logging
 
 question_manager = Questions()
 answers = prompt(question_manager.get_questions())
@@ -27,4 +30,3 @@ file_writer = writefile()
 file_writer.write(template)
 
 print("README.md created successfully.")
-
