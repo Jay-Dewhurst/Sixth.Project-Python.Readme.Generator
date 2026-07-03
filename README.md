@@ -8,7 +8,7 @@
 ## Installation
 - Instructions: Clone the files locally from Github
 ## Usage Information
-- Information: Run the called main.py
+- Information: Run the file called main.py using command "python main.py" in vscode/suitable alternative.
 ## License
 - Product License: MIT License
 ## Contact Information
