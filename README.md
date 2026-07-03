@@ -12,6 +12,6 @@
 ## License
 - Product License: MIT License
 ## Contact Information
-- Information: email@email.com
+- Information: jd.jsuk1@gmail.com
 ### Disclaimer
 - All rights reserved, Copyright (C) 2026 Jay Dewhurst
