@@ -2,6 +2,7 @@ from rich.console import Console
 from rich.table import Table
 from rich.progress import track
 from rich.logging import RichHandler
+from rich import box
 import time
 import logging
 
@@ -9,20 +10,23 @@ import logging
 console = Console()
 
 # 1. Display Styled Text
-console.print("[bold green]Readme Generator Program[/bold green]")
+def print_header():
+    console.print("[bold red]Readme Generator Program[/bold red]")
 
 
 # 2. Creating and Displaying a Table
 def display_table():
-    table = Table(title="Programming Languages")
+    table = Table(title="[bold yellow]Readme Generator[/bold yellow]", box=box.ROUNDED)
 
-    table.add_column("Language", style="cyan", justify="left")
-    table.add_column("Type", style="magenta", justify="left")
-    table.add_column("Usage", style="yellow", justify="left")
+    table.add_column("[red]Questions[/red]", style="bold blue", justify="center")
+    table.add_column("[red]Details[/red]", style="white", justify="center")
 
-    table.add_row("Python", "Interpreted", "Web, AI, Data Science")
-    table.add_row("C++", "Compiled", "Game Development, Systems")
-    table.add_row("JavaScript", "Interpreted", "Web Development")
+    table.add_row("Project Title", "Add a Project Title")
+    table.add_row("Project Description", "Add a Project Description")
+    table.add_row("Installation Instructions", "Explain how to Install the program")
+    table.add_row("Usage Information", "Explain how to use the program")
+    table.add_row("Dropdown List", "Select a License")
+    table.add_row("Contact", "Enter Contact information including name and email")
 
     console.print(table)
 

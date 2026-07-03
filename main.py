@@ -1,15 +1,17 @@
 from InquirerPy import prompt
 from questions import Questions, writefile
-from effects import display_table
-from effects import loading_simulation
-from effects import setup_logging
+from effects import display_table, loading_simulation, setup_logging, print_header
 
 question_manager = Questions()
 answers = prompt(question_manager.get_questions())
 
+logger = setup_logging()
+print_header()
+display_table()
+loading_simulation()
+
 # Create a template for the readme
-template = f"""
-# User Information
+template = f"""# User Information
 - Name: {answers['Name']}
 - Project: {answers['Project_Title']}
 ## Project Description
@@ -29,4 +31,4 @@ template = f"""
 file_writer = writefile()
 file_writer.write(template)
 
-print("README.md created successfully.")
+logger.info("README.md created successfully.")
