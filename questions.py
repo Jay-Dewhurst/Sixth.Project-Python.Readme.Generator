@@ -27,6 +27,7 @@ class Questions:
     def add_question(self, question):
         self.questions.append(question)
 
+# Defines the class needed to write to the new file and also prints the output to the terminal as well
 class writefile:
     def __init__(self, filename="README.md"):
         self.filename = filename

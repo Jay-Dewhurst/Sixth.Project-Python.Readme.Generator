@@ -1,1 +1,2 @@
-
+# For exclusion of sensitive environment dependicies
+myenv/

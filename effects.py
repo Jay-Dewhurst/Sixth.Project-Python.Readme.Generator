@@ -1,3 +1,4 @@
+# Resources needed for Program to run
 from rich.console import Console
 from rich.table import Table
 from rich.progress import track
@@ -6,15 +7,15 @@ from rich import box
 import time
 import logging
 
-# Initialize Rich Console
+# Initializes Rich Console
 console = Console()
 
-# 1. Display Styled Text
+# Display's Styled Text
 def print_header():
     console.print("[bold red]Readme Generator Program[/bold red]")
 
 
-# 2. Creating and Displaying a Table
+# Creates and Displays a table containing visual examples of output
 def display_table():
     table = Table(title="[bold yellow]Readme Generator[/bold yellow]", box=box.ROUNDED)
 
@@ -30,14 +31,14 @@ def display_table():
 
     console.print(table)
 
-# 3. Progress Bar Simulation
+# Adds Progress Bar simulation underneath the table
 def loading_simulation():
     console.print("[bold cyan]Processing data...[/bold cyan]")
     for _ in track(range(10), description="Processing..."):
         time.sleep(0.2)  # Simulate work
 
 
-# 4. Rich Logging Example
+# Defines Rich Logger Example
 def setup_logging():
     logging.basicConfig(
         level="INFO", format="%(message)s", datefmt="[%X]", handlers=[RichHandler()]
